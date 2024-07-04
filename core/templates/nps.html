@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
+<div class="container">
+    <div class="row text-center mt-2">
+        <img src="{% static 'img/logo.png' %}" alt="logo" class="img img-fluid" style="max-width: 200px;">
+        <p>NPS Cliente</p>
+    </div>
+
+    <form action="" method="post" class="row justify-content-end">
+        {% csrf_token %}
+        <p>Avaliação Cliente: 0 = Péssimo e 10 = Ótimo</p>
+        <div class="col-12 p-2 rounded border">
+            <p class="mt-2"><b>Atendimento:</b>
+                <input type="radio" name="atendimento" value="0"/> 0 
+                <input type="radio" name="atendimento" value="1"/> 1 
+                <input type="radio" name="atendimento" value="2"/> 2 
+                <input type="radio" name="atendimento" value="3"/> 3 
+                <input type="radio" name="atendimento" value="4"/> 4 
+                <input type="radio" name="atendimento" value="5"/> 5 
+                <input type="radio" name="atendimento" value="6"/> 6 
+                <input type="radio" name="atendimento" value="7"/> 7 
+                <input type="radio" name="atendimento" value="8"/> 8 
+                <input type="radio" name="atendimento" value="9"/> 9 
+                <input type="radio" name="atendimento" value="10"/> 10 
+            </p>
+        </div>
+
+        <div class="col-12 p-2 rounded border mt-3">
+            <p class="mt-2"><b>Apresentação do Posto:</b>
+                <input type="radio" name="apresentacao" value="0"/> 0 
+                <input type="radio" name="apresentacao" value="1"/> 1 
+                <input type="radio" name="apresentacao" value="2"/> 2 
+                <input type="radio" name="apresentacao" value="3"/> 3 
+                <input type="radio" name="apresentacao" value="4"/> 4 
+                <input type="radio" name="apresentacao" value="5"/> 5 
+                <input type="radio" name="apresentacao" value="6"/> 6 
+                <input type="radio" name="apresentacao" value="7"/> 7 
+                <input type="radio" name="apresentacao" value="8"/> 8 
+                <input type="radio" name="apresentacao" value="9"/> 9 
+                <input type="radio" name="apresentacao" value="10"/> 10 
+            </p>
+        </div>
+        
+        <div class="col-12 p-2 rounded border mt-3">
+            <p class="mt-2"><b>Qualidade Combústivel:</b>
+                <input type="radio" name="qualidade" value="0"/> 0 
+                <input type="radio" name="qualidade" value="1"/> 1 
+                <input type="radio" name="qualidade" value="2"/> 2 
+                <input type="radio" name="qualidade" value="3"/> 3 
+                <input type="radio" name="qualidade" value="4"/> 4 
+                <input type="radio" name="qualidade" value="5"/> 5 
+                <input type="radio" name="qualidade" value="6"/> 6 
+                <input type="radio" name="qualidade" value="7"/> 7 
+                <input type="radio" name="qualidade" value="8"/> 8 
+                <input type="radio" name="qualidade" value="9"/> 9 
+                <input type="radio" name="qualidade" value="10"/> 10 
+            </p>
+        </div>
+
+        <div class="col-12 p-2 rounded border mt-3">            
+            <input type="text" name="nome" class="form-control mt-2" placeholder="Nome (Opcional)">
+            <input type="email" name="email" class="form-control mt-2" placeholder="E-Mail (Opcional)">
+            <textarea name="observacao" class="form-control mt-2" placeholder="Observações (Opcional)"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary col-md-3 mt-4">Enviar</button>
+
+
+    </form>
+</div>
+
+
+{% endblock %}
