@@ -10,37 +10,47 @@
     <form action="" method="post" class="row justify-content-end">
         {% csrf_token %}
         <p><b>Avaliação Cliente:</b> 0 = Péssimo e 5 = Ótimo</p>
-        <div class="col-12 p-2 rounded border">
-            <p class="mt-2"><b>Atendimento:</b>
-                <input type="radio" name="atendimento" value="0"/> 0 
-                <input type="radio" name="atendimento" value="1"/> 1 
-                <input type="radio" name="atendimento" value="2"/> 2 
-                <input type="radio" name="atendimento" value="3"/> 3 
-                <input type="radio" name="atendimento" value="4"/> 4 
-                <input type="radio" name="atendimento" value="5"/> 5 
-            </p>
+        
+        <div class="col-md-4 p-2 mt-3">
+            <div class="rounded border p-2">
+                <p class="mt-2"><b>Atendimento:</b> </p>
+                <p>
+                    <input type="radio" name="atendimento" value="0"/> 0 
+                    <input type="radio" name="atendimento" value="1"/> 1 
+                    <input type="radio" name="atendimento" value="2"/> 2 
+                    <input type="radio" name="atendimento" value="3"/> 3 
+                    <input type="radio" name="atendimento" value="4"/> 4 
+                    <input type="radio" name="atendimento" value="5"/> 5 
+                </p>
+            </div>
         </div>
 
-        <div class="col-12 p-2 rounded border mt-3">
-            <p class="mt-2"><b>Apresentação do Posto:</b>
-                <input type="radio" name="apresentacao" value="0"/> 0 
-                <input type="radio" name="apresentacao" value="1"/> 1 
-                <input type="radio" name="apresentacao" value="2"/> 2 
-                <input type="radio" name="apresentacao" value="3"/> 3 
-                <input type="radio" name="apresentacao" value="4"/> 4 
-                <input type="radio" name="apresentacao" value="5"/> 5 
-            </p>
+        <div class="col-md-4 p-2 mt-3">
+            <div class="rounded border p-2">
+                <p class="mt-2"><b>Apresentação do Posto:</b> </p>
+                <p>
+                    <input type="radio" name="apresentacao" value="0"/> 0 
+                    <input type="radio" name="apresentacao" value="1"/> 1 
+                    <input type="radio" name="apresentacao" value="2"/> 2 
+                    <input type="radio" name="apresentacao" value="3"/> 3 
+                    <input type="radio" name="apresentacao" value="4"/> 4 
+                    <input type="radio" name="apresentacao" value="5"/> 5 
+                </p>
+            </div>
         </div>
         
-        <div class="col-12 p-2 rounded border mt-3">
-            <p class="mt-2"><b>Qualidade Combústivel:</b>
-                <input type="radio" name="qualidade" value="0"/> 0 
-                <input type="radio" name="qualidade" value="1"/> 1 
-                <input type="radio" name="qualidade" value="2"/> 2 
-                <input type="radio" name="qualidade" value="3"/> 3 
-                <input type="radio" name="qualidade" value="4"/> 4 
-                <input type="radio" name="qualidade" value="5"/> 5 
-            </p>
+        <div class="col-md-4 p-2 mt-3">
+            <div class="rounded border p-2">
+                <p class="mt-2"><b>Qualidade Combústivel:</b> </p>
+                <p>
+                    <input type="radio" name="qualidade" value="0"/> 0 
+                    <input type="radio" name="qualidade" value="1"/> 1 
+                    <input type="radio" name="qualidade" value="2"/> 2 
+                    <input type="radio" name="qualidade" value="3"/> 3 
+                    <input type="radio" name="qualidade" value="4"/> 4 
+                    <input type="radio" name="qualidade" value="5"/> 5 
+                </p>
+            </div>
         </div>
 
         <div class="col-12 p-2 rounded border mt-3">            
