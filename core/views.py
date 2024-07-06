@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from .models import NPS
 
@@ -8,9 +8,9 @@ def index_view(request):
 
 def nps_view(request, filial=1):
     if request.method == 'POST':
-        atendimento = int(request.POST.get('atendimento', 0))
-        apresentacao = int(request.POST.get('apresentacao', 0))
-        qualidade = int(request.POST.get('qualidade', 0))
+        atendimento = int(request.POST.get('atendimento', 5))
+        apresentacao = int(request.POST.get('apresentacao', 5))
+        qualidade = int(request.POST.get('qualidade', 5))
         nome = request.POST.get('nome', '-')
         email = request.POST.get('email', '-')
         observacao = request.POST.get('observacao', '-')
@@ -26,8 +26,23 @@ def nps_view(request, filial=1):
 
         obj.save()
 
+        if atendimento + apresentacao + qualidade < 12:
+            return redirect ('nps_detalhe', pk=obj.pk)
+
         return redirect('nps_fim')
     return render(request, 'nps.html')
+
+
+def nps_detalhe(request, pk):
+    obj = get_object_or_404(NPS, pk=pk)
+    
+    if request.method == 'POST':
+        detalhes = request.POST.get('detalhes', '-')
+        obj.detalhes = detalhes
+        obj.save()
+
+        return redirect('nps_fim')
+    return render(request, 'nps_detalhe.html')
 
 
 def nps_fim(request):

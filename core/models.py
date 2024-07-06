@@ -8,7 +8,7 @@ class NPS(models.Model):
     email = models.CharField(max_length=500, null=True, blank=True, default=None)    
     atendimento = models.IntegerField(default=0)
     apresentacao = models.IntegerField(default=0)
-    qualidade = models.IntegerField(default=0)
+    qualidade = models.IntegerField(default=0)    
     observacao = models.CharField(max_length=2000, null=True, blank=True, default='-')
     detalhes = models.CharField(max_length=2000, null=True, blank=True, default='-')
 
