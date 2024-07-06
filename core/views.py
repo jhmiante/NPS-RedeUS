@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import NPS
 
 def index_view(request):
+    return redirect('nps_view')
     return render(request, 'index.html')
 
 
@@ -45,5 +46,5 @@ def nps_detalhe(request, pk):
     return render(request, 'nps_detalhe.html')
 
 
-def nps_fim(request):
+def nps_fim(request):    
     return render(request, 'nps_fim.html')
