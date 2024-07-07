@@ -1,0 +1,22 @@
+{% load static %}
+
+<div class="col-12 p-2 mt-2 text-center text-success">
+    <p>Aproveite e baixe o APP da Petrobrás PREMMIA para uma melhor experiência e agilidade no seu atendimento</p>
+    <a href="{% url 'download_app' tipo=1 %}" target="_blank" style="text-decoration: none;">
+        <img src="{% static 'img/app-store.png' %}" alt="" style="max-width: 100px;">
+    </a>
+    <a href="{% url 'download_app' tipo=2 %}" target="_blank" style="text-decoration: none;">
+        <img src="{% static 'img/play-store.png' %}" alt="" style="max-width: 100px;">
+    </a>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-4 mt-2 p-2">
+            
+        </div>
+        <div class="col-md-4 mt-2 p-2">
+            
+        </div>
+    </div>
+
+    <img src="{% static 'img/premia.png' %}" class="img img-fluid">
+</div>
