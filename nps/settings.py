@@ -27,7 +27,15 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['redeus.pythonanywhere.com', '127.0.0.1', '*']
+# ALLOWED_HOSTS = ['redeus.pythonanywhere.com', '127.0.0.1', '*']
+# settings.py
+
+ALLOWED_HOSTS = ['web-production-7658.up.railway.app', '.up.railway.app', 'up.railway.app', 'railway.app']
+SECURE_REFERRER_POLICY = 'same-origin'
+CSRF_TRUSTED_ORIGINS = ['https://web-production-7658.up.railway.app']
+
+# Restante das suas configurações
+
 
 
 # Application definition
